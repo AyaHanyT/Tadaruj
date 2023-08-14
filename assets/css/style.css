@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap');
+
+/*--------Home-page--------*/
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Harmattan', sans-serif;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    padding: 20px 0
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #b3b8bd;
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+input,
+a,
+button,
+select,
+.form-control:focus {
+    outline: none !important;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+section {
+    margin: 3.5rem 0;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.title {
+    color: white;
+    background-color: #121F63;
+    box-shadow: 6px 7px 3px 0px #040c34bd;
+    width: 19%;
+    text-align: center;
+    padding: 0.55rem;
+    margin-bottom: 3rem;
+}
+
+.page {
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+/* side-nav */
+.navbar-toggler {
+    background-image: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    height: 32px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 100%;
+    margin-right: -100%;
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    right: 0;
+    background-image: url('../img/menu-bg.png');
+    background-position: top right;
+    background-size: cover;
+    overflow-x: hidden;
+    padding-top: 4vh;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidenav>* {
+    width: 100%;
+}
+
+.sidenav .close-btn {
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    height: 32px;
+    cursor: pointer;
+}
+
+.sidenav .links {
+    margin-top: 40px;
+}
+
+.sidenav .menu-body .links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    font-size: 31px;
+    margin-right: 20px;
+}
+
+
+
+/* intro-section */
+header {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+    z-index: 99;
+    padding-top: 20px;
+}
+
+header .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
+
+.sticky-navbar {
+    position: fixed !important;
+    top: -82px !important;
+    transform: translateY(82px);
+    -webkit-transform: translateY(82px);
+    -moz-transform: translateY(82px);
+    -ms-transform: translateY(82px);
+    -o-transform: translateY(82px);
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    width: 100% !important;
+}
+
+.navbar-brand {
+    margin-left: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.white-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 23px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    width: fit-content;
+    font-size: 20px;
+    box-shadow: 0 0 17px 2px #ffffff26 ;
+}
+.pattern{
+position: relative;
+}
+.pattern img{
+    position: absolute;
+    top: 20px;
+    right: -29px;
+}
+.white-btn:hover{ 
+    color: white;
+    text-shadow: 0 5px 8px #ffffff26;
+    }
+
+
+
+/******** cover *******/
+.cover {
+    width: 100vw;
+    height: 100vh;
+}
+
+.cover video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.brief {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    color: #E5E5E5;
+    margin: 0 5%;
+}
+
+.brief p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+
+/********* Contact Us **********/
+section#contact {
+    background-image: linear-gradient(45deg, rgba(18, 59, 99, 50%), rgba(177, 13, 15, 50%)), url(../img/contact-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-form {
+    display: flex;
+    width: 40%;
+    background-color: transparent;
+    margin: 2rem 1rem 1rem;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    text-align: right;
+    width: 80%;
+    margin: auto;
+    color: #989898;
+    border: none;
+    border-radius: 0;
+}
+
+.contact-form button,
+.btn-primary {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: white;
+    border: none;
+    border-radius: 0;
+    background-image: linear-gradient(45deg, #B10D0F, #6B0D0E, #121F63, #040C34);
+    font-size: larger;
+    padding: 0.3rem;
+}
+
+
+
+
+
+
+
+
+/******** footer *********/
+footer {
+    background-color: black;
+    width: 93%;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    padding-top: 6px;
+    position: absolute;
+    right: 3.5%;
+    bottom: 0;
+    z-index: 999;
+}
+
+.copyright {
+    display: flex;
+    gap: 7px;
+    font-size: 19px;
+    height: fit-content;
+}
+
+.social-links .list-unstyled li {
+    margin: 4px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links .list-unstyled {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+
+.social-links .list-unstyled a i {
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media-style */
+@media screen and (min-width:1200px) {}
+
+@media screen and (min-width:1300px) {}
+
+@media screen and (min-width:1350px) {}
+
+@media screen and (min-width:1370px) {}
+
+@media screen and (max-width:1400px) {
+    .brief {
+        top: 44%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1025px) {
+    .brief {
+        top: 41%;
+    }
+}
+
+@media screen and (max-width: 993px) {}
+
+@media screen and (max-width: 820px) {
+    section {
+        padding: 1rem 0;
+    }
+
+    .title {
+        width: 30%;
+    }
+
+    .sticky-navbar {
+        top: -20px;
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (max-width: 600px) {}
+
+
+@media screen and (max-width: 576px) {
+
+    footer {
+        width: 100%;
+        right: 0;
+    }
+
+    footer .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .brief {
+        top: 30%;
+    }
+
+    .navbar-toggler {
+        bottom: unset;
+        left: 8%;
+    }
+
+    header {
+        height: fit-content;
+    }
+
+    .copyright {
+        justify-content: center;
+        font-size: 17px;
+    }
+
+    .social-links .list-unstyled {
+        width: 68%;
+        margin: auto;
+    }
+
+    .social-links .list-unstyled li a {
+        font-size: 14px;
+    }
+
+    .brief p {
+        margin: 18px auto;
+        text-align: center;
+        width: 83%;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {}
+
+
+
+@media screen and (max-width: 400px) {
+    header .container-fluid {
+        width: 100%;
+    }
+    .brief p {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 300px) {}
+
+@media screen and (max-width:270px) {}
