@@ -628,6 +628,93 @@ label {
 
 
 
+/********** projects *****/
+.black-bg {
+    background-image: url('../img/black-bg.png');
+    background-position: top;
+    background-size: 100%;
+    padding: 150px 0 0;
+    background-size: 100vw;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.black-bg .project-card:nth-child(1) img.img-fluid {
+    border-top-left-radius: 48px;
+}
+
+.black-bg .project-card:nth-child(2) img.img-fluid {
+    border-bottom-right-radius: 48px;
+}
+
+.black-bg .project-card:nth-child(3) img.img-fluid {
+    border-top-right-radius: 48px;
+}
+
+.black-bg .project-card:nth-child(4) img.img-fluid {
+    border-bottom-left-radius: 48px;
+}
+
+.project-card {
+    width: 80%;
+    position: relative;
+    margin-bottom: 8vh;
+}
+
+.project-card img.img-fluid {
+    height: 400px;
+    object-fit: cover;
+    filter: blur(0);
+    transition: 0.3s all;
+    width: 100%;
+}
+
+.project-card .detailes {
+    width: fit-content;
+    position: absolute;
+    margin-top: -62px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.project-card:hover img.img-fluid {
+    filter: blur(3px);
+    transition: 0.3s all;
+}
+
+.project-card:hover .detailes {
+    opacity: 1;
+    transition: 0.3s all;
+}
+
+.black-bg p {
+    font-size: 20px;
+    color: white;
+    width: 73%;
+    margin-bottom: 2rem;
+}
+
+.project-card .detailes {
+    color: black;
+}
+
+.project-card .detailes a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.project-card a img {
+    width: 29px;
+    height: auto;
+}
+
+
 
 /******** footer *********/
 footer {
@@ -686,6 +773,20 @@ footer {
 
 /* media-style */
 @media screen and (min-width:1441px) {
+    .detailes h4 {
+        font-size: 30px;
+    }
+
+    .detailes a {
+        font-size: 26px;
+    }
+
+    .project-card .detailes{
+        margin-top: -85px;
+    }
+    .project-card a img {
+        width: 43px;
+    }
     .contact h4 {
         font-size: 40px;
     }
@@ -799,7 +900,7 @@ footer {
         align-items: center;
         display: flex;
         background-size: cover;
-    margin-left: 3rem;
+        margin-left: 3rem;
     }
 
     .about p {
@@ -871,8 +972,12 @@ footer {
     .floated {
         width: 138px;
     }
+
     .partners-brief {
         margin-right: 2vw;
+    }
+    .project-card{
+    margin-bottom: 10vh;
     }
 }
 
@@ -888,6 +993,15 @@ footer {
 }
 
 @media screen and (max-width: 993px) {
+    .project-card {
+        width: 100%;
+    }
+    .black-bg p {
+        width: 100%;
+    }
+    .black-bg {
+        background-size: 1000px;
+    }
     .about {
         margin-left: 1rem;
         background-size: cover;
@@ -941,6 +1055,22 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+   
+    .project-card img.img-fluid {
+        height: 320px;
+    }
+    .black-bg .project-card:nth-child(1) img.img-fluid {
+        border-top-left-radius: 30px;
+    }
+    .black-bg .project-card:nth-child(2) img.img-fluid {
+        border-bottom-right-radius: 30px;
+    }
+    .black-bg .project-card:nth-child(3) img.img-fluid {
+        border-top-right-radius: 30px;
+    }
+    .black-bg .project-card:nth-child(4) img.img-fluid {
+        border-bottom-left-radius: 30px;
+    }
     section {
         padding: 1rem 0;
     }
@@ -1039,13 +1169,23 @@ footer {
 
 
 @media screen and (max-width: 576px) {
+    .black-bg{
+        padding: 120px 5rem 100px;
+    }
+    .project-card {
+        margin-bottom: 6vh;
+    }
+    .black-bg .row{
+    display: flex;
+    flex-direction: column-reverse;
+    }
     .services {
         padding: 2rem;
     }
 
     .about {
         padding: 120px 24px 0 24px;
-    margin-left: 0;
+        margin-left: 0;
     }
 
     .about img.main-img {
@@ -1142,6 +1282,9 @@ footer {
 
     .brief p {
         width: 100%;
+    }
+    .black-bg {
+        padding: 120px 1rem 100px;
     }
 }
 
