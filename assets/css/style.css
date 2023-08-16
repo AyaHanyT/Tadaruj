@@ -67,6 +67,10 @@ section {
     margin-bottom: 2rem;
 }
 
+.title.black {
+    color: black;
+}
+
 .page {
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -84,9 +88,9 @@ section {
     background-size: cover;
     width: 32px;
     position: absolute;
-    bottom: 0%;
     left: 5%;
     height: 32px;
+    top: 50vh;
 }
 
 .navbar-toggler:focus {
@@ -154,7 +158,7 @@ header {
     position: absolute;
     width: 100%;
     margin: 0 auto;
-    height: 50%;
+    height: fit-content;
     z-index: 99;
     padding-top: 20px;
 }
@@ -259,9 +263,10 @@ header .container-xl {
     background-repeat: no-repeat;
     background-color: white;
     background-position: top right;
-    background-size: 97%;
+    background-size: cover;
     height: 100vh;
     padding: 2rem;
+    margin-left: 2rem;
     padding: 120px 0 0;
 }
 
@@ -276,7 +281,7 @@ header .container-xl {
 }
 
 .about img.main-img {
-    height: calc(100vh - 174px);
+    height: 500px;
     width: 400px;
     object-fit: cover;
     border-width: 9px 0 0 9px;
@@ -356,6 +361,7 @@ header .container-xl {
     align-items: center;
     padding: 1.5rem;
     margin-bottom: 1rem;
+    margin-right: 6vw;
 }
 
 .partners .partners-brief .row {
@@ -399,56 +405,226 @@ header .container-xl {
 
 
 /********* Contact Us **********/
-section#contact {
-    background-image: linear-gradient(45deg, rgba(18, 59, 99, 50%), rgba(177, 13, 15, 50%)), url(../img/contact-bg.jpg);
-    background-position: center;
-    background-size: cover;
+.contact {
+    background-image: url(../img/contact-us.png);
+    background-position: left;
+    background-size: auto;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 100vh;
+    padding-top: 120px;
 }
 
-#contact .container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+.black .navbar-brand img {
+    filter: invert(1);
 }
 
-.contact-form {
-    display: flex;
-    width: 40%;
-    background-color: transparent;
-    margin: 2rem 1rem 1rem;
-    padding: 1rem;
-    flex-direction: column;
+.black .white-btn {
+    border-color: black;
+    color: black;
 }
 
-.contact-form input,
-.contact-form textarea {
+.black .pattern img {
+    filter: invert(1);
+}
+
+.black .navbar-toggler {
+    filter: invert(1);
+}
+
+.contact form {
+    margin-top: 20vh;
+}
+
+.form-control {
     text-align: right;
-    width: 80%;
-    margin: auto;
-    color: #989898;
-    border: none;
-    border-radius: 0;
+    padding: 6px 10px;
+    margin: 0 0 10px 0;
+    border-radius: 6px;
+    font-size: 18px;
 }
 
-.contact-form button,
-.btn-primary {
-    text-align: center;
-    width: 80%;
-    margin: auto;
+.contact .form-control {
+    border: 2px solid #6662a7de;
+}
+
+.darkblue-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 23px;
     color: white;
+    background-color: #2B294E;
     border: none;
-    border-radius: 0;
-    background-image: linear-gradient(45deg, #B10D0F, #6B0D0E, #121F63, #040C34);
-    font-size: larger;
-    padding: 0.3rem;
+    min-width: 120px;
+    border-radius: 6px;
+    width: fit-content;
+    font-size: 20px;
+    box-shadow: 0 4px 17px 2px #2b294e28;
+}
+
+.submit-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-box .pattern img {
+    top: 18px;
+    right: -22px;
+    z-index: 99;
+}
+
+.white-btn:hover {
+    color: white;
+    text-shadow: 0 5px 8px #ffffff26;
+}
+
+.contact h4 {
+    font-size: 27px;
+    color: #2B294E;
+    margin-bottom: 19px;
 }
 
 
 
+/******** Join us **********/
+.join {
+    background-image: url('../img/join-us.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+}
 
+.join .form-control {
+    border: 2px solid rgba(0, 0, 0, 0.51);
+}
+
+label {
+    font-size: 20px;
+    color: black;
+}
+
+.black-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 23px;
+    color: white;
+    background-color: black;
+    border: none;
+    min-width: 120px;
+    border-radius: 6px;
+    width: fit-content;
+    font-size: 20px;
+    box-shadow: 0 4px 17px 2px #2b294e28;
+}
+
+
+.file-upload-warpper {
+    color: #676767;
+    border: 2px dashed rgba(0, 0, 0, 0.70);
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 6px 10px;
+    margin: 0 0 10px 0;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.file-upload-warpper .file-upload-content {
+    display: none;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+
+.file-upload-warpper .file-upload-input {
+    padding: 0;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.file-upload-warpper .image-upload-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload-warpper .drag-text {
+    text-align: center;
+    position: absolute;
+    color: #676767;
+}
+
+.file-upload-warpper .drag-text img {
+    width: 16px;
+}
+
+.file-upload-warpper .drag-text p {
+    font-size: 18px;
+    margin-top: -8px;
+}
+
+.file-upload-warpper .file-upload-image {
+    height: 39px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: auto;
+    width: 39px;
+}
+
+.file-upload-warpper .remove-image-warpper {
+    /* border-radius: 0 10px; */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* position: absolute;
+    background-color: #8c8c99;
+    box-shadow: 0 2px 5px #ddd; */
+}
+
+.file-upload-warpper .image-title {
+    max-height: 40px;
+    overflow: hidden;
+    max-width: 95%;
+    font-size: 18px;
+}
+
+.file-upload-warpper .remove-image {
+    width: fit-content;
+    color: white;
+    background-color: #B12024;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    height: 22px;
+    width: 22px
+}
+
+.file-upload-warpper .remove-image img {
+    width: 14px;
+}
+
+.application-form form.row .col-12 {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
 
 
 
@@ -510,9 +686,41 @@ footer {
 
 /* media-style */
 @media screen and (min-width:1441px) {
+    .contact h4 {
+        font-size: 40px;
+    }
+
+    .contact h1.title {
+        font-size: 50px;
+    }
+
+    .contact {
+        background-size: contain;
+    }
+
+    .form-control {
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 28px;
+    }
+
+    .file-upload-warpper {
+        height: 74px;
+    }
+
+    .file-upload-warpper .drag-text p {
+        font-size: 28px;
+    }
+
+    .file-upload-warpper .drag-text img {
+        width: 21px;
+    }
+
     .about img.main-img {
-        height: calc(100vh - 400px);
-        width: 87%;
+        height: 500px;
+        width: 400px;
     }
 
     .navbar-brand img {
@@ -525,10 +733,23 @@ footer {
         height: 41px;
     }
 
+    .darkblue-btn,
+    .black-btn {
+        padding: 9px 33px;
+        font-size: 30px;
+        min-width: 164px;
+    }
+
     .white-btn {
         padding: 9px 33px;
         border: 2px solid white;
         font-size: 30px;
+    }
+
+    .submit-box .pattern img {
+        top: 27px;
+        right: -22px;
+        width: 49px;
     }
 
     .pattern img {
@@ -574,7 +795,11 @@ footer {
     }
 
     .about {
-        padding: 200px 0 0;
+        padding: 80px 0 0;
+        align-items: center;
+        display: flex;
+        background-size: cover;
+    margin-left: 3rem;
     }
 
     .about p {
@@ -582,13 +807,13 @@ footer {
     }
 
     .about-imgs .small-img:first-of-type {
-        right: -22px;
-        top: 356px;
+        right: 53px;
+        top: 118px;
     }
 
     .about-imgs .small-img:last-of-type {
         top: -288px;
-        left: 0;
+        left: 75px;
         z-index: 0;
     }
 
@@ -602,6 +827,13 @@ footer {
         }
     }
 
+    .services {
+        background-size: cover;
+        background-position: center;
+        margin: 3.5rem auto;
+        border-radius: 27px;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:1440px) {
@@ -639,12 +871,19 @@ footer {
     .floated {
         width: 138px;
     }
+    .partners-brief {
+        margin-right: 2vw;
+    }
 }
 
 
 @media screen and (max-width: 1025px) {
     .brief {
         top: 41%;
+    }
+
+    .contact {
+        background-size: cover;
     }
 }
 
@@ -679,6 +918,26 @@ footer {
     .floated {
         width: 184px;
     }
+
+    .contact {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    .contact .container>.row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact h1 {
+        margin-bottom: 1rem;
+    }
+
+    .contact form {
+        margin-top: 0vh;
+    }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -728,10 +987,12 @@ footer {
     .partners-brief {
         padding: 0;
     }
+
     .partners {
         padding: 1rem 0;
         margin: 6.5rem 0 3rem;
     }
+
     .floated {
         width: 129px;
         object-fit: cover;
@@ -739,6 +1000,7 @@ footer {
         position: relative;
         height: 150px;
     }
+
     .owl-carousel .owl-item img {
         max-width: 188px;
         height: 38px;
@@ -755,6 +1017,22 @@ footer {
     .about-imgs .small-img:last-of-type {
         left: 66px;
     }
+
+    header .container-xl {
+        width: 98%;
+    }
+
+    .contact {
+        background-position: center;
+        height: fit-content;
+        min-height: calc(100vh + 200px);
+    }
+
+    .join {
+        min-height: 100vh;
+        height: calc(100vh + 120px);
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 600px) {}
@@ -763,39 +1041,50 @@ footer {
 @media screen and (max-width: 576px) {
     .services {
         padding: 2rem;
-    }    
-    .about{
+    }
+
+    .about {
         padding: 120px 24px 0 24px;
+    margin-left: 0;
     }
+
     .about img.main-img {
-        height: 324px;
-        width: 300px;
+        height: 270px;
+        width: 250px;
     }
+
     .about-imgs .small-img:last-of-type {
-        left: 30px;
+        left: 5px;
     }
+
     .services img {
         width: 50%;
     }
+
     .partners .partners-brief p {
         font-size: 20px;
     }
+
     .owl-carousel .owl-item img {
         max-width: 168px;
         height: 37px;
     }
+
     .partners {
         padding: 1rem 0;
         margin: 5.5rem 0 4rem;
     }
-.title {
-    margin-bottom: 1rem;
-    font-size: 41px;
-}
+
+    .title {
+        margin-bottom: 1rem;
+        font-size: 31px;
+    }
+
     .about-imgs .small-img:first-of-type {
         right: 1px;
         top: -22px;
     }
+
     footer {
         width: 100%;
         right: 0;
